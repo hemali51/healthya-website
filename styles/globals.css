@@ -109,10 +109,11 @@ img {
 }
 .bannertoppart h1 span {
   font-family: "Cabin Sketch";
-  color: var(--buttoncolor);
+  color: var(--greencolor);
 }
 .bannertoptitle {
   padding-left: 104px;
+  position: relative;
 }
 .bannertoptitle {
   padding-left: 104px;
@@ -141,6 +142,16 @@ img {
   top: 180px;
   right: 0;
   z-index: 1;
+}
+.pattern {
+  position: relative;
+  right: -52%;
+}
+.headingpattern {
+  position: absolute;
+  top: -50px;
+  left: 30px;
+  z-index: -1;
 }
 @media (min-width: 1025px) {
   .headermenumainpart ul li a:hover:after {

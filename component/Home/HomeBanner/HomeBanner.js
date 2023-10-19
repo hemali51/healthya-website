@@ -8,7 +8,9 @@ const HomeBanner = () => {
       <HomeBannerTop />
       <HomeBannerBottom />
       <div className="bannerpatten">
-        <img src="/images/homebanner/bannerpattern.png" alt="" />
+        <div className="pattern">
+          <img src="/images/homebanner/newbannerpattern.png" alt="" />
+        </div>
       </div>
     </div>
   );
