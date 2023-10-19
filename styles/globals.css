@@ -129,6 +129,9 @@ img {
   flex: 0 0 60%;
   -ms-flex: 0 0 60%;
 }
+.bannerbottompart .leftsideimg img {
+  transform-origin: left;
+}
 .bannerbottompart .rightsideimg {
   max-width: 40%;
   flex: 0 0 40%;
@@ -217,7 +220,7 @@ img {
     top: 8px;
   }
   .menutoggle.closemenu button span:last-child {
-    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
   }
   .logo img,
