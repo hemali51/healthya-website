@@ -43,7 +43,7 @@ const Header = () => {
               </div>
 
               <div className="headermenumainpart">
-                <ul className="d-md-flex align-items-center d-sm-block">
+                <ul className="d-md-flex align-items-center d-sm-block headermenulist">
                   <li>
                     <Link href="/">Home</Link>
                   </li>
