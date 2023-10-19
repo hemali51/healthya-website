@@ -31,6 +31,26 @@ label {
 img {
   max-width: 100%;
 }
+/* custom-cursor */
+.custom-cursor {
+  position: fixed;
+  top: -30px;
+  left: -30px;
+  transform: translate(-50%, -50%);
+  z-index: 999999;
+  pointer-events: none;
+  height: 13px;
+  width: 13px;
+  background: var(--greencolor);
+  border-radius: 50%;
+  transition: all 0.2s ease, top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), left 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.custom-cursor.expand {
+  height: 50px;
+  width: 50px;
+  opacity: 0.2;
+}
+/* custom-cursor */
 /* header css start */
 .headerpart {
   padding: 21px 0;
@@ -108,7 +128,7 @@ img {
   font-family: "Cabin Sketch";
 }
 .bannertoppart h1 span {
-  font-family: "Cabin Sketch";
+  font-family: inherit;
   color: var(--greencolor);
 }
 .bannertoptitle {
@@ -129,9 +149,6 @@ img {
   max-width: 60%;
   flex: 0 0 60%;
   -ms-flex: 0 0 60%;
-}
-.bannerbottompart .leftsideimg img {
-  transform-origin: left;
 }
 .bannerbottompart .rightsideimg {
   max-width: 40%;

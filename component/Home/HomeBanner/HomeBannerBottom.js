@@ -1,29 +1,30 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react";
 
 const HomeBannerBottom = () => {
-  const bannerAnimation = () => {
-    if(typeof window === "undefined") {
-      return;
-    }
-    if(window.innerWidth < 768) {
-      return;
-    }
-    window.addEventListener("scroll", function () {
-      var mainDiv = document.querySelector(".bannerbottompart");
-      var mainImg = document.querySelector(".bannerbottompart .leftsideimg img");
-      var value = window.scrollY;
-      if(mainDiv) {
-        var transformValue = value / 4000 + 1;
-        if(transformValue > 1.2) {
-          transformValue = 1.2;
+  const bannerBottomAnimation = () => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", function () {
+        var bannerBottom = document.querySelector(".bannerbottompart");
+        var bannerBottomImage = document.querySelector(
+          ".bannerbottompart .leftsideimg img"
+        );
+        if (bannerBottom) {
+          var bannerBottomPosition = bannerBottom.getBoundingClientRect();
+          if (bannerBottomPosition.top < window.innerHeight) {
+            var value = window.scrollY;
+            var transformValue = value / 3500 + 1;
+            if (transformValue > 1.2) {
+              transformValue = 1.2;
+            }
+            bannerBottomImage.style.transform = `scale(${transformValue})`;
+          }
         }
-        mainImg.style.transform = `scale(${transformValue})`;
-      }
-    });
-  }
-  useEffect(()=>{
-    bannerAnimation();
-  },[])
+      });
+    }
+  };
+  useEffect(() => {
+    bannerBottomAnimation();
+  }, []);
   return (
     <div className="bannerbottompart">
       <div className="leftsideimg">
@@ -34,6 +35,6 @@ const HomeBannerBottom = () => {
       </div>
     </div>
   );
-}
+};
 
-export default HomeBannerBottom
+export default HomeBannerBottom;
