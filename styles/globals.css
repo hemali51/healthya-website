@@ -445,7 +445,7 @@ a {
 }
 .downloadappwrap {
   background: var(--graybgcolor);
-  padding: 60px 0;
+  padding: 160px 0;
 }
 .downloadappwrap {
   position: relative;
@@ -467,7 +467,7 @@ a {
   display: flex;
 }
 .playstorebtn {
-  margin-right: 18px;
+  margin-left: 18px;
 }
 .leftcontentmainbox {
   display: flex;
@@ -476,13 +476,12 @@ a {
 .leftcontentdata {
   padding-right: 48px;
 }
-.leftcontentdata h6 {
-  font-size: 36px;
+.downloadleft h6 {
+  font-size: 26px;
   font-weight: 700;
   color: var(--textcolor);
   margin-bottom: 26px;
   padding-right: 10px;
-  max-width: 501px;
 }
 .rightqrimg {
   position: relative;
@@ -510,17 +509,101 @@ a {
 .companiontoppart {
   padding-bottom: 107px;
 }
-.companionpart{
+.companionpart {
   display: flex;
 }
-.leftcomnioncontentbox.howitcontentbox h4{
+.leftcomnioncontentbox.howitcontentbox h4 {
   color: var(--textcolor);
 }
-.leftcomnioncontentbox.howitcontentbox h4::before{
+.leftcomnioncontentbox.howitcontentbox h4::before {
   border-color: var(--textcolor);
 }
-.comapnionleftpart{
+.comapnionleftpart {
   padding-right: 69px;
+}
+.commonbtn.greenborderbtn a {
+  border-color: var(--subheadcolor);
+  background: transparent;
+  color: var(--subheadcolor);
+  padding: 14px 36px;
+  font-weight: 700;
+}
+.greenborderbtn {
+  margin-top: 30px;
+}
+.stickyright {
+  position: sticky;
+  top: 102px;
+  right: 0;
+  max-height: 89vh;
+}
+.comapinonrightpart {
+  position: relative;
+  display: flex;
+}
+.mobileframe {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.mobileframe img {
+  max-height: 80vh;
+}
+.companionmobileimg {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+.mobilescreen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: auto;
+  left: 0;
+  text-align: center;
+  padding: 10px 0;
+}
+.mobilescreen img {
+  max-height: 76vh;
+}
+.companionpattern img {
+  max-height: 89vh;
+}
+.mobilescreen {
+  top: 78px;
+}
+.leftcomnioncontentbox .commonbtn a {
+  padding: 14px 36px;
+  font-weight: 700;
+}
+.leftcomnioncontentbox .commonbtn{
+  margin-top: 30px;
+}
+.homehealthyareportwrap{
+padding: 120px 0;
+}
+.homehealthyatopwrap h3{
+  color:var(--lightwhitecolor);
+}
+.homehealthyareportwrap  p{
+  font-size: 24px;
+font-weight: 400;
+color:var(--lightwhitecolor);
+}
+.downloadleft .commontitle h3{
+  font-size: 45px;
+}
+.downloadimg iframe{
+  max-width: 100%;
+  border-radius: 10px;
 }
 @media (min-width: 1025px) {
   .headermenumainpart ul li a:hover:after {
@@ -529,6 +612,22 @@ a {
   .commonbtn a:hover {
     background: transparent;
     color: var(--buttoncolor);
+  }
+  .commonbtn.greenborderbtn a:hover {
+    background: var(--subheadcolor);
+    color: var(--whitecolor);
+  }
+}
+@media (max-width: 1830px) {
+}
+@media (max-width: 1800px) {
+  .mobilescreen {
+    top: 54px;
+  }
+}
+@media (max-width: 1520px) {
+  .mobilescreen {
+    top: 33px;
   }
 }
 @media (max-width: 991px) {
@@ -730,7 +829,7 @@ a {
     width: 40%;
     margin: auto;
   }
-  .leftcontentdata h6 {
+  .downloadleft h6 {
     font-size: 28px;
   }
 }

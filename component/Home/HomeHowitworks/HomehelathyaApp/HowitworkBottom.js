@@ -1,4 +1,5 @@
-import React from "react";
+import Link from "next/link";
+import React, { Fragment } from "react";
 
 const HowitworkBottom = () => {
   const howitcontent = [
@@ -12,23 +13,30 @@ const HowitworkBottom = () => {
     {
       id: 2,
       himg: "kiskoimgone",
-      htitle: "BMI (Body Mass Index)",
+      htitle: "Weight Management",
       hparagraph:
-        "Quantifies body size using weight and height. Crucial for assessing health risks and population obesity trends, guiding prevention and care.",
+        "Driven through data to achieve a healthy body weight through balanced nutrition and physical activity. It’s vital for overall health, reducing disease risk, and enhancing well-being.",
     },
     {
       id: 3,
       himg: "kiskoimgone",
-      htitle: "BMI (Body Mass Index)",
+      htitle: "Cardiovascular risk",
       hparagraph:
-        "Quantifies body size using weight and height. Crucial for assessing health risks and population obesity trends, guiding prevention and care.",
+        "Refers to the likelihood of heart and blood vessel problems. Proactive management is crucial for preventing heart disease, stroke, and improving overall health and longevity.",
     },
     {
       id: 4,
       himg: "kiskoimgone",
-      htitle: "BMI (Body Mass Index)",
+      htitle: "PreConsultation",
       hparagraph:
-        "Quantifies body size using weight and height. Crucial for assessing health risks and population obesity trends, guiding prevention and care.",
+        "Delivered digitally empowers your clinician before your health and wellbeing consultation. It’s crucial for your clinician to understand all your health metrics, enabling accurate diagnosis and personalized care.",
+      hbtn: (
+        <Fragment>
+          <div className="commonbtn greenborderbtn">
+            <Link href="/">Learn More</Link>
+          </div>
+        </Fragment>
+      ),
     },
   ];
   return (
@@ -61,6 +69,7 @@ const HowitworkBottom = () => {
               </div>
               <h4>{data.htitle}</h4>
               <p>{data.hparagraph}</p>
+              {data.hbtn}
             </div>
           );
         })}
