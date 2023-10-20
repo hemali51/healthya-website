@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 
 const HomeAboutContainer = () => {
+  const aboutPatternAnimation = () => {
+    if (typeof window !== "undefined") {
+      var homeaboutWrapper = document.querySelector(".homeaboutwrapper .abouttitle");
+      var homeaboutpatten = document.querySelector(".homeaboutpatten img");
+      window.addEventListener("scroll", function () {
+        if (homeaboutWrapper && homeaboutpatten) {
+          var homeaboutWrapperPosition = homeaboutWrapper.getBoundingClientRect();
+          if (homeaboutWrapperPosition.top - 100 < window.innerHeight ) {
+            var transformYValue =
+              (window.innerHeight - 100 - homeaboutWrapperPosition.top) / 2;
+            homeaboutpatten.style.transform = `translateY(-${transformYValue}px)`;
+          }
+        }
+      });
+    }
+  };
+  useEffect(() => {
+    aboutPatternAnimation();
+  }, []);
   return (
     <div className="homeaboutwrapper">
       <div className="container">

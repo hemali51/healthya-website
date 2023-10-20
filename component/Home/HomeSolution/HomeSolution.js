@@ -1,28 +1,44 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import Fade from 'react-reveal/Fade';
 const HomeSolution = () => {
   const solutionlist = [
     {
-      id: 1,
       simg: "solution_one",
       stitle: "healthya stations",
       spara: "Durable Class2 medical grade hardware.",
     },
     {
-      id: 2,
       simg: "solution_two",
       stitle: "Companion App",
       spara:
         "Sophisticated patient-facing app with online and video consultation pathway capabilities.",
     },
     {
-      id: 3,
       simg: "solution_three",
       stitle: "healthya Reporting",
       spara:
         "Organisation-facing powerful data analytics and user recall systems.",
     },
   ];
+  const solutiomrightsideAnimation = () => {
+    if (typeof window !== "undefined") {
+      var solutionrightWrapper = document.querySelector(".solutiomrightside");
+      var solutionrightImage = document.querySelector(".solutiomrightside img");
+      window.addEventListener("scroll", function () {
+        if (solutionrightWrapper && solutionrightImage) {
+          var solutionrightWrapperPosition = solutionrightWrapper.getBoundingClientRect();
+          if (solutionrightWrapperPosition.top - 100 < window.innerHeight ) {
+            var transformYValue =
+              (window.innerHeight - 100 - solutionrightWrapperPosition.top) / 2;
+              solutionrightImage.style.transform = `translateY(-${transformYValue}px)`;
+          }
+        }
+      });
+    }
+  }
+  useEffect(()=>{
+    solutiomrightsideAnimation();
+  },[])
   return (
     <div className="homesolutionwrap bg_white">
       <div className="container">
@@ -41,17 +57,19 @@ const HomeSolution = () => {
             </p>
             <div className="solutionlistmain">
               <div className="solutionslist">
-                {solutionlist.map((list) => {
+                {solutionlist.map((list,index) => {
                   return (
-                    <div className="solutionbox" key={list.id}>
-                      <div className="listicon">
-                       <img src={`/images/homesolution/${list.simg}.svg`} alt=""/>
+                    <Fade top duration={700} delay={index*50} distance="50px">
+                      <div className="solutionbox" key={index}>
+                        <div className="listicon">
+                        <img src={`/images/homesolution/${list.simg}.svg`} alt=""/>
+                        </div>
+                        <div className="solutioncontent">
+                          <h4>{list.stitle}</h4>
+                          <p>{list.spara}</p>
+                        </div>
                       </div>
-                      <div className="solutioncontent">
-                        <h4>{list.stitle}</h4>
-                        <p>{list.spara}</p>
-                      </div>
-                    </div>
+                    </Fade>
                   );
                 })}
               </div>
