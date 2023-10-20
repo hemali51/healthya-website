@@ -1,7 +1,9 @@
 
+import Accreditations from "@/component/Home/Accreditations";
 import DownloadApp from "@/component/Home/DownloadApp/DownloadApp";
 import HomeAboutContainer from "@/component/Home/HomeAbout/HomeAboutContainer";
 import HomeBanner from "@/component/Home/HomeBanner/HomeBanner";
+import HomeContact from "@/component/Home/HomeContact/HomeContact";
 import Homehowitworks from "@/component/Home/HomeHowitworks/Homehowitworks";
 import HomeSolution from "@/component/Home/HomeSolution/HomeSolution";
 import Head from "next/head";
@@ -18,7 +20,9 @@ export default function Home() {
       <HomeAboutContainer />
       <HomeSolution />
       <Homehowitworks />
-      <DownloadApp/>
+      <DownloadApp />
+      <Accreditations/>
+      <HomeContact/>
     </div>
   );
 }
