@@ -407,10 +407,6 @@ a {
 .pl-109 {
   padding-left: 109px;
 }
-.howitcontentbox {
-  padding-top: 20em;
-  padding-bottom: 10em;
-}
 .howitleftpart {
   position: relative;
 }
@@ -429,6 +425,10 @@ a {
 .howitcontentbox {
   padding-left: 28px;
   position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .howitcontentbox h4::before {
   content: "";
@@ -497,6 +497,14 @@ a {
 .leftimages img {
   max-height: 80vh;
 }
+.kioskImageWrapper .kioskImages img {
+  opacity: 0;
+  transition: opacity 0.5s ease 0s;
+}
+.kioskImageWrapper .kioskImages.active img{
+  opacity: 1;
+}
+
 .darkpattern img {
   max-height: 90vh;
 }
@@ -564,6 +572,11 @@ a {
   width: 100%;
   flex-direction: column;
   /* justify-content: center; */
+  opacity: 0;
+  transition: opacity 0.5s ease 0s;
+}
+.companionmobileimg.show {
+  opacity: 1;
 }
 .mobilescreen {
   position: absolute;
@@ -573,6 +586,11 @@ a {
   left: 0;
   text-align: center;
   padding: 10px 0;
+  opacity: 0;
+  transition: opacity 0.5s ease 0s;
+}
+.mobilescreen.active {
+  opacity: 1;
 }
 .mobilescreen img {
   max-height: 76vh;
