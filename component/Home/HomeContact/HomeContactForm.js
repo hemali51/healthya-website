@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import CommonForm from "./CommonForm";
 import Link from "next/link";
+import { Fade } from "react-reveal";
 
 const HomeContactForm = () => {
   const contactlist = [
@@ -38,18 +39,20 @@ const HomeContactForm = () => {
                 <div className="solutionlistmain">
                   {contactlist.map((clist, index) => {
                     return (
-                      <div className="solutionbox" key={index}>
-                        <div className="listicon">
-                          <img
-                            src={`/images/Homecontact/${clist.cico}.svg`}
-                            alt=""
-                          />
+                      <Fade top duration={700} delay={index*25}>
+                        <div className="solutionbox" key={index}>
+                          <div className="listicon">
+                            <img
+                              src={`/images/Homecontact/${clist.cico}.svg`}
+                              alt=""
+                            />
+                          </div>
+                          <div className="solutioncontent">
+                            <h4>{clist.ctitle}</h4>
+                            <p>{clist.cpara}</p>
+                          </div>
                         </div>
-                        <div className="solutioncontent">
-                          <h4>{clist.ctitle}</h4>
-                          <p>{clist.cpara}</p>
-                        </div>
-                      </div>
+                      </Fade>
                     );
                   })}
                 </div>

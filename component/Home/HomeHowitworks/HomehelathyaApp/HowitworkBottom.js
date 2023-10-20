@@ -16,13 +16,13 @@ const HowitworkBottom = () => {
         "Driven through data to achieve a healthy body weight through balanced nutrition and physical activity. It’s vital for overall health, reducing disease risk, and enhancing well-being.",
     },
     {
-      himg: "kioskimgone",
+      himg: "kioskimgthree",
       htitle: "Cardiovascular risk",
       hparagraph:
         "Refers to the likelihood of heart and blood vessel problems. Proactive management is crucial for preventing heart disease, stroke, and improving overall health and longevity.",
     },
     {
-      himg: "kioskimgtwo",
+      himg: "kioskimgfour",
       htitle: "PreConsultation",
       hparagraph:
         "Delivered digitally empowers your clinician before your health and wellbeing consultation. It’s crucial for your clinician to understand all your health metrics, enabling accurate diagnosis and personalized care.",

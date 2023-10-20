@@ -59,7 +59,7 @@ const HomeSolution = () => {
               <div className="solutionslist">
                 {solutionlist.map((list,index) => {
                   return (
-                    <Fade top duration={700} delay={index*50} distance="50px">
+                    <Fade top duration={700} delay={index*25}>
                       <div className="solutionbox" key={index}>
                         <div className="listicon">
                         <img src={`/images/homesolution/${list.simg}.svg`} alt=""/>
