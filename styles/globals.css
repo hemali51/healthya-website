@@ -435,12 +435,15 @@ a {
   position: absolute;
   width: 10px;
   height: 10px;
-  border: 2px solid var(--subheadcolor);
-  border-radius: 50%;
+  /* border: 2px solid var(--subheadcolor);
+  border-radius: 50%; */
   top: 0;
-  left: -28px;
+  left: -40px;
   bottom: 0;
   margin: auto;
+  background: url(/images/howitwork/greenround.png) no-repeat 0 0;
+  width: 20px;
+  height: 21px;
 }
 .mobileshow {
   display: none;
@@ -501,7 +504,7 @@ a {
   opacity: 0;
   transition: opacity 0.5s ease 0s;
 }
-.kioskImageWrapper .kioskImages.active img{
+.kioskImageWrapper .kioskImages.active img {
   opacity: 1;
 }
 
@@ -783,6 +786,47 @@ iframe {
 .footervideo iframe {
   border-radius: 10px;
 }
+.accorditationswrap {
+  padding: 120px 0;
+}
+.acoorditationbox {
+  border-radius: 16px;
+  background: var(--lightwhitecolor);
+  padding: 43px 56px;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.12);
+  max-height: 169px;
+}
+.acoorditationboxmain {
+  margin-top: 120px;
+  text-align: center;
+}
+.acoorditationpart .commontitle:before {
+  display: none;
+}
+.leftcomnioncontentbox.howitcontentbox h4::before {
+  background: url(/images/howitwork/orangedot.png) no-repeat 0 0;
+}
+.laptopframe {
+  position: absolute;
+  top: 48%;
+  bottom: 0;
+  margin: auto;
+  left: -17%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.homehealthyareportwrap .leftimages {
+  position: absolute;
+  top: 48%;
+  bottom: 0;
+  left: -42px;
+  margin: auto;
+  transform: translateY(-50%);
+  margin-top: 15px;
+}
+.homehealthyareportwrap .leftimages img {
+  max-height: inherit;
+}
 @media (min-width: 1025px) {
   .headermenumainpart ul li a:hover:after {
     width: 100%;
@@ -812,9 +856,19 @@ iframe {
     /* top: 54px; */
   }
 }
-@media (max-width: 1520px) {
-  .mobilescreen {
-    /* top: 33px; */
+@media (max-width: 1600px) {
+  .laptopframe {
+    top: 45%;
+    left: -139px;
+  }
+  .homehealthyareportwrap .leftimages {
+    left: -68px;
+    margin-top: 0;
+  }
+}
+@media (max-width: 1380px) {
+  .homehealthyareportwrap .leftimages {
+    left: -68px;
   }
 }
 @media (max-width: 991px) {

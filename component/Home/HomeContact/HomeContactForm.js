@@ -32,7 +32,7 @@ const HomeContactForm = () => {
     <div className="homecontactformwrap">
       <div className="container">
         <div className="homecontactpart">
-          <div className="row">
+          <div className="row align-items-center">
             <div className="col-md-5">
               <div className="contactleft pl-109">
                 <div className="solutionlistmain">
