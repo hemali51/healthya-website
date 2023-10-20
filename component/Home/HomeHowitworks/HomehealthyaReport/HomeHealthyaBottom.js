@@ -5,35 +5,35 @@ const HomeHealthyaBottom = () => {
   const healthyareport = [
     {
       id: 1,
-      himg: "kiskoimgone",
+      himg: "kioskimgone",
       htitle: "Targeted Interventions",
       hparagraph:
         "Data insights pinpoint high-risk populations and specific health needs, enabling more effective resource allocation and intervention.",
     },
     {
       id: 2,
-      himg: "kiskoimgone",
+      himg: "kioskimgone",
       htitle: "Improved Care Coordination",
       hparagraph:
         "Healthcare data fosters better collaboration among providers, enhancing patient care and reducing service duplication.",
     },
     {
       id: 3,
-      himg: "kiskoimgone",
+      himg: "kioskimgone",
       htitle: "Preventive Care",
       hparagraph:
         "· Health data analysis identifies at-risk individuals for early intervention, reducing chronic disease rates and improving community health.",
     },
     {
       id: 4,
-      himg: "kiskoimgone",
+      himg: "kioskimgone",
       htitle: "Resource Allocation",
       hparagraph:
         "Data insights guide resource allocation, optimizing healthcare delivery by directing resources where needed most.",
     },
     {
       id: 5,
-      himg: "kiskoimgone",
+      himg: "kioskimgone",
       htitle: "Quality Improvement",
       hparagraph:
         "Ongoing data analysis tracks care quality, driving continuous improvement efforts to ensure optimal patient outcomes.",
@@ -55,16 +55,16 @@ const HomeHealthyaBottom = () => {
               <img src="images/howitwork/howitworkdarkone.png" alt="" />
             </div>
             <div className="leftimages">
-              <img src="images/howitwork/kiskoimgone.png" alt="" />
+              <img src="images/howitwork/kioskimgone.png" alt="" />
             </div>
             <div className="leftimages">
-              <img src="images/howitwork/kiskoimgone.png" alt="" />
+              <img src="images/howitwork/kioskimgone.png" alt="" />
             </div>
             <div className="leftimages">
-              <img src="images/howitwork/kiskoimgone.png" alt="" />
+              <img src="images/howitwork/kioskimgone.png" alt="" />
             </div>
             <div className="leftimages">
-              <img src="images/howitwork/kiskoimgone.png" alt="" />
+              <img src="images/howitwork/kioskimgone.png" alt="" />
             </div>
           </div>
         </div>
