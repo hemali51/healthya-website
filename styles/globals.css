@@ -5,8 +5,11 @@
   --textcolor: #0a2f3a;
   --lightgreencolor: #cdeff0;
   --lightwhitecolor: #f0f4f5;
+  --solutionboxcolor: #fcfcfc;
   --whitecolor: #fff;
   --greencolor: #049096;
+  --subheadcolor: #33eed9;
+  --graybgcolor: #eaf1f2;
 }
 body,
 h1,
@@ -31,6 +34,9 @@ label {
 img {
   max-width: 100%;
 }
+a {
+  transition: all 0.5s ease-in-out 0s;
+}
 /* custom-cursor */
 .custom-cursor {
   position: fixed;
@@ -43,7 +49,8 @@ img {
   width: 13px;
   background: var(--greencolor);
   border-radius: 50%;
-  transition: all 0.2s ease, top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), left 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.2s ease, top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    left 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .custom-cursor.expand {
   height: 50px;
@@ -83,6 +90,7 @@ img {
   font-weight: 600;
   border-radius: 90px;
   display: inline-block;
+  border: 1px solid var(--buttoncolor);
 }
 .flex-1 {
   flex: 1;
@@ -160,7 +168,7 @@ img {
 }
 .bannerpatten {
   position: absolute;
-  top: 180px;
+  top: 120px;
   right: 0;
   z-index: 1;
 }
@@ -221,10 +229,273 @@ img {
   padding: 14px 36px;
   margin-top: 14px;
 }
+.commontitle {
+  position: relative;
+}
+.commontitle h3 {
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--textcolor);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+}
+.commontitle:before {
+  content: "";
+  position: absolute;
+  background: url(/images/homesolution/solution_round.png);
+  width: 172px;
+  height: 172px;
+  top: -55px;
+  left: -69px;
+}
+.commontitle span {
+  color: var(--greencolor);
+}
+.bg_white {
+  background: var(--lightwhitecolor);
+}
+.homesolutionpart {
+  display: flex;
+  padding: 192px 0 120px;
+  align-items: center;
+}
+.solutionleftside {
+  flex: 0 0 60%;
+  -ms-flex: 0 0 60%;
+  max-width: 60%;
+  padding-left: 109px;
+}
+.solutiomrightside {
+  flex: 0 0 40%;
+  -ms-flex: 0 0 40%;
+  max-width: 40%;
+}
+.solutionleftside p {
+  font-size: 16px;
+  color: var(--textcolor);
+  font-weight: 500;
+  max-width: 532px;
+}
+.solutionlistmain {
+  margin-top: 110px;
+}
+.solutionbox {
+  display: flex;
+  border-radius: 16px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
+  overflow: hidden;
+  max-width: 480px;
+}
+.listicon {
+  width: 169px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--lightgreencolor);
+}
+.solutioncontent {
+  flex: 1;
+  background: var(--solutionboxcolor);
+  padding: 40px 24px;
+}
+.solutioncontent h4 {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--textcolor);
+  margin-bottom: 16px;
+}
+.solutioncontent p {
+  color: #839cab;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.healthyaappwrap {
+  padding: 120px 0;
+}
+.darkcolor {
+  background: var(--textcolor);
+}
+.subhead span {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--subheadcolor);
 
+  padding: 8px 24px;
+  border: 1px solid var(--subheadcolor);
+  width: auto;
+  border-radius: 90px;
+}
+.subhead {
+  margin-bottom: 38px;
+}
+
+.howitworkstop {
+  padding-left: 109px;
+  margin-bottom: 110px;
+}
+.healthyaappwrap .commontitle h3 {
+  color: var(--lightwhitecolor);
+}
+.healthyaappwrap p {
+  color: var(--lightwhitecolor);
+  font-size: 24px;
+  font-weight: 400;
+}
+.howitleftpart {
+  position: relative;
+}
+.leftimages {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -120px;
+  margin: auto;
+}
+
+.howitworkbottompart {
+  display: flex;
+}
+.w-60 {
+  flex: 0 0 60%;
+  -ms-flex: 0 0 60%;
+  max-width: 60%;
+}
+.w-40 {
+  flex: 0 0 40%;
+  -ms-flex: 0 0 40%;
+  max-width: 40%;
+}
+.pl-109 {
+  padding-left: 109px;
+}
+.howitcontentbox {
+  padding-top: 20em;
+  padding-bottom: 10em;
+}
+.howitleftpart {
+  position: relative;
+}
+.leftsticky {
+  position: sticky;
+  top: 100px;
+  left: 0;
+}
+.howitcontentbox h4 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--lightwhitecolor);
+  position: relative;
+}
+.howitcontentbox {
+  padding-left: 28px;
+  position: relative;
+}
+.howitcontentbox h4::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--subheadcolor);
+  border-radius: 50%;
+  top: 0;
+  left: -28px;
+  bottom: 0;
+  margin: auto;
+}
+.mobileshow {
+  display: none;
+}
+.downloadappwrap {
+  background: var(--graybgcolor);
+  padding: 60px 0;
+}
+.downloadappwrap {
+  position: relative;
+}
+.downloadappwrap:after {
+  content: "";
+  position: absolute;
+  background: url(/images/downloadapp/whiteround.png);
+  width: 172px;
+  height: 172px;
+  top: 0;
+  right: 0;
+}
+.downloadappwrap .commontitle:before {
+  background: url(/images/downloadapp/whiteround.png);
+  background-size: 100%;
+}
+.appsbtns {
+  display: flex;
+}
+.playstorebtn {
+  margin-right: 18px;
+}
+.leftcontentmainbox {
+  display: flex;
+  align-items: center;
+}
+.leftcontentdata {
+  padding-right: 48px;
+}
+.leftcontentdata h6 {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--textcolor);
+  margin-bottom: 26px;
+  padding-right: 10px;
+  max-width: 501px;
+}
+.rightqrimg {
+  position: relative;
+  left: -34px;
+}
+.downloadapppart {
+  position: relative;
+  z-index: 1;
+}
+.leftimages img {
+  max-height: 80vh;
+}
+.darkpattern img {
+  max-height: 90vh;
+}
+.companionwrap {
+  background: var(--lightwhitecolor);
+  padding: 120px 0;
+}
+.companiontoppart p {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--textcolor);
+}
+.companiontoppart {
+  padding-bottom: 107px;
+}
+.companionpart{
+  display: flex;
+}
+.leftcomnioncontentbox.howitcontentbox h4{
+  color: var(--textcolor);
+}
+.leftcomnioncontentbox.howitcontentbox h4::before{
+  border-color: var(--textcolor);
+}
+.comapnionleftpart{
+  padding-right: 69px;
+}
 @media (min-width: 1025px) {
   .headermenumainpart ul li a:hover:after {
     width: 100%;
+  }
+  .commonbtn a:hover {
+    background: transparent;
+    color: var(--buttoncolor);
   }
 }
 @media (max-width: 991px) {
@@ -331,7 +602,9 @@ img {
   .bannerbottompart {
     display: block;
   }
-  .bannerbottompart .leftsideimg {
+  .bannerbottompart .leftsideimg,
+  .solutionleftside,
+  .solutiomrightside {
     max-width: 100%;
     flex: 0 0 100%;
     -ms-flex: 0 0 100%;
@@ -371,6 +644,62 @@ img {
   .abouttitle {
     padding-left: 50px;
   }
+  .solutionleftside {
+    padding-left: 50px;
+  }
+  .homesolutionpart {
+    display: block;
+    padding: 80px 0;
+  }
+  .solutionbox {
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .solutionleftside {
+    padding-left: 15px;
+    max-width: 100%;
+    text-align: center;
+  }
+  .solutionleftside p {
+    max-width: 100%;
+  }
+  .solutionlistmain {
+    margin-top: 60px;
+    text-align: left;
+    margin-bottom: 90px;
+  }
+  .commontitle {
+    display: inline-block;
+  }
+  .solutiomrightside {
+    text-align: center;
+  }
+  .mobileshow {
+    display: block;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .howitleftpart {
+    display: none;
+  }
+  .w-40,
+  .w-60 {
+    flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .howitcontentbox {
+    padding-top: 40px;
+    padding-left: 109px;
+    padding-bottom: 0px;
+  }
+  .mobileshow img {
+    width: 40%;
+    margin: auto;
+  }
+  .leftcontentdata h6 {
+    font-size: 28px;
+  }
 }
 @media (max-width: 767px) {
   .bannerwrapper {
@@ -406,10 +735,102 @@ img {
     line-height: 1.2;
     margin-bottom: 30px;
   }
-  .abouttitle,.homeaboutcontent {
-    padding-left: 30px;
+  .abouttitle,
+  .homeaboutcontent {
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .headingpattern img {
     width: 100%;
-}
+  }
+  .solutionleftside {
+    padding-left: 0px;
+  }
+  .homesolutionpart {
+    padding: 40px 0;
+  }
+  .commontitle h3 {
+    font-size: 40px;
+  }
+  .homeaboutwrapper {
+    padding-bottom: 20px;
+  }
+  .commontitle:before {
+    width: 80px;
+    height: 80px;
+    top: -15px;
+    left: 20px;
+    background-size: 100%;
+  }
+  .downloadappwrap:after {
+    width: 80px;
+    height: 80px;
+    background-size: 100%;
+  }
+  .solutioncontent {
+    padding: 15px 20px;
+  }
+  .listicon {
+    width: 100px;
+  }
+  .listicon img {
+    width: 72px;
+  }
+  .solutioncontent h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .solutioncontent p {
+    font-size: 14px;
+  }
+  .howitworkstop,
+  .howitcontentbox {
+    padding-left: 0px;
+  }
+  .howitcontentbox h4 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  .howitcontentbox h4::before {
+    display: none;
+  }
+  .howitworkpart p {
+    font-size: 18px;
+  }
+  .mobileshow img {
+    width: 80%;
+    margin: auto;
+  }
+  .howitworkstop {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .downloadleft {
+    text-align: center;
+  }
+  .leftcontentmainbox {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .leftcontentdata {
+    padding-right: 0px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .rightqrimg {
+    left: 0;
+  }
+  .downloadimg {
+    text-align: center;
+  }
+  .downloadappwrap {
+    padding: 40px 0;
+  }
+  .howitworkswrap {
+    padding: 40px 0;
+  }
+  .subhead span {
+    font-size: 14px;
+  }
 }
