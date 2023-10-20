@@ -1,8 +1,10 @@
-import React, { Children, useEffect } from "react";
+import React, { Children, useEffect, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import Loader from "./Loader";
 
 const Layout = ({ children }) => {
+  const [isLoading, setIsLoading] = useState(true);
   const addMouseHover = (element, cursor) => {
     element.addEventListener("mouseover", () => {
       cursor.classList.add("expand");
@@ -32,9 +34,13 @@ const Layout = ({ children }) => {
   };
   useEffect(() => {
     cursorAnimation();
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
   }, []);
   return (
     <div className="layout">
+      <Loader isLoading={isLoading}/>
       <Header />
       {children}
       <Footer />

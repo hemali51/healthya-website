@@ -13,8 +13,8 @@ const HomeBannerBottom = () => {
           if (bannerBottomPosition.top < window.innerHeight) {
             var value = window.scrollY;
             var transformValue = value / 3500 + 1;
-            if (transformValue > 1.2) {
-              transformValue = 1.2;
+            if (transformValue > 1.15) {
+              transformValue = 1.15;
             }
             bannerBottomImage.style.transform = `scale(${transformValue})`;
           }
