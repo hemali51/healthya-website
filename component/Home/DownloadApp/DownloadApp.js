@@ -8,7 +8,7 @@ const DownloadApp = () => {
         <div className="downloadapppart">
           <div className="row align-items-center">
             <div className="col-md-7">
-              <div className="downloadleft">
+              <div className="downloadleft pl-109">
                 <div className="commontitle">
                   <h3>
                     Download the <span>healthya app</span>
@@ -47,7 +47,6 @@ const DownloadApp = () => {
                   frameBorder="0"
                   allowFullScreen
                 ></iframe>
-                
               </div>
             </div>
           </div>
