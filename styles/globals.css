@@ -2,7 +2,7 @@
 @import url(bootstrap/dist/css/bootstrap.min.css);
 :root {
   --buttoncolor: #142d38;
-  --textcolor: #0a2f3a;
+  --textcolor: #142D38;
   --lightgreencolor: #cdeff0;
   --lightwhitecolor: #f0f4f5;
   --solutionboxcolor: #fcfcfc;
@@ -237,7 +237,7 @@ a {
 }
 .homeaboutpatten {
   position: absolute;
-  top: 30px;
+  top: 175px;
   left: 0px;
   z-index: 1;
 }
@@ -425,7 +425,7 @@ a {
 .howitcontentbox {
   padding-left: 28px;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -580,6 +580,11 @@ a {
   opacity: 0;
   transition: opacity 0.5s ease 0s;
 }
+.companionlaptopimg {
+  transition: opacity 0.5s ease 0s;
+  opacity: 0;
+}
+.companionlaptopimg.show,
 .companionmobileimg.show {
   opacity: 1;
 }
@@ -594,6 +599,11 @@ a {
   opacity: 0;
   transition: opacity 0.5s ease 0s;
 }
+.laptopscreen {
+  opacity: 0;
+  transition: opacity 0.5s ease 0s;
+}
+.laptopscreen.active,
 .mobilescreen.active {
   opacity: 1;
 }

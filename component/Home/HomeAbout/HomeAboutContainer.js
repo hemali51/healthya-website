@@ -9,9 +9,9 @@ const HomeAboutContainer = () => {
       window.addEventListener("scroll", function () {
         if (homeaboutWrapper && homeaboutpatten) {
           var homeaboutWrapperPosition = homeaboutWrapper.getBoundingClientRect();
-          if (homeaboutWrapperPosition.top - 100 < window.innerHeight ) {
+          if (homeaboutWrapperPosition.top - 50 < window.innerHeight ) {
             var transformYValue =
-              (window.innerHeight - 100 - homeaboutWrapperPosition.top) / 2;
+              (window.innerHeight - 50 - homeaboutWrapperPosition.top) / 2;
             homeaboutpatten.style.transform = `translateY(-${transformYValue}px)`;
           }
         }
